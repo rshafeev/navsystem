@@ -2,7 +2,9 @@
 The client-server system was used for vehicle movement monitoring in real time 
 See demonstration video: [https://www.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA](Monitor Navigation (Client-Server)System, C++)
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+https://www.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA/0.jpg)](http://www.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA)
 
 
 ### Used technologies and tools ###
