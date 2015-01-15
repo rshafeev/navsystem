@@ -1,12 +1,7 @@
 ### Description ###
 The client-server system was used for vehicle movement monitoring in real time 
-See demonstration video: [https://www.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA](Monitor Navigation (Client-Server)System, C++)
-
-https://www.youtube.com/channel/UCQoB2TN1E5OpkYd_JGMihaA
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/watch?v=jWkSbgRwfmw/0.jpg)](http://www.youtube.com/watch?v=jWkSbgRwfmw)
-
-https://www.youtube.com/watch?v=jWkSbgRwfmw
+See demonstration video:
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/jWkSbgRwfmw/0.jpg)](http://www.youtube.com/watch?v=jWkSbgRwfmw)
 
 ### Used technologies and tools ###
 * Basic: C++, WinAPI/MFC, Visual Studio 2013
