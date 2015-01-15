@@ -7,7 +7,7 @@
 ////////***************************************************
 const double M_PI=3.14159265358979323846;
 
-const CString RES_PATH ="D:\\university\\II kyrs\\OOP\\MonitoringSystem\\system\\NavMainProgram\\res\\";//удалить
+const CString RES_PATH ="D:\\university\\II kyrs\\OOP\\MonitoringSystem\\workspace\\NavMainProgram\\res\\";//удалить
 const CString LOAD_PATH="D:\\university\\II kyrs\\OOP\\MonitoringSystem\\maps\\";//удалить
 //D:\Instityt\II kyrs\OOP\Kyrsov\NavMainProgram\RES\Models
 #import "C:\\Program Files\\Common Files\\System\\ado\\msado15.dll" no_namespace rename("EOF","EoF")
