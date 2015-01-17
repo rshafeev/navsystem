@@ -1,5 +1,5 @@
 #pragma once
-
+/*
 #include <vector>
 using namespace std;
 //#define SIZE 4048         // Размер принимаемого сообщения
@@ -8,3 +8,5 @@ using namespace std;
  bool CreateMainThread(CListBox *OutPut);
 
 class CTemp{ void temp();};
+
+*/

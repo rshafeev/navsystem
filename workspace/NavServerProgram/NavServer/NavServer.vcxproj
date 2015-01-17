@@ -147,14 +147,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AbstractClient.cpp" />
+    <ClCompile Include="AbstractOutputStream.cpp" />
     <ClCompile Include="adoclasses.cpp" />
     <ClCompile Include="ClientThread.cpp" />
     <ClCompile Include="DBaseDlg.cpp" />
-    <ClCompile Include="DBWork.cpp" />
+    <ClCompile Include="DispatcherClient.cpp" />
+    <ClCompile Include="GPSPointRepository.cpp" />
+    <ClCompile Include="ClientTraker.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="NavServer.cpp" />
+    <ClCompile Include="Server.cpp" />
     <ClCompile Include="ServerThread.cpp" />
-    <ClCompile Include="ServerWork.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -162,16 +166,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AbstractClient.h" />
+    <ClInclude Include="AbstractOutputStream.h" />
     <ClInclude Include="adoclasses.h" />
     <ClInclude Include="adodefs.h" />
     <ClInclude Include="ClientThread.h" />
     <ClInclude Include="DBaseDlg.h" />
-    <ClInclude Include="DBWork.h" />
+    <ClInclude Include="DispatcherClient.h" />
+    <ClInclude Include="GPSPointRepository.h" />
+    <ClInclude Include="ClientTraker.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="NavServer.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Server.h" />
     <ClInclude Include="ServerThread.h" />
-    <ClInclude Include="ServerWork.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

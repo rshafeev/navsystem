@@ -80,13 +80,3 @@ struct TEditorProtocol
   int type;
   int RunTime;
 };
-
-struct User
-{
-  bool active;             // Признак того, что клиент подключен (true - подключен, false - отключен)
-  int Accept;              // Сокет подключенного клиента
-  sockaddr_in AcpStruct;   // Сруктура содержит информацию о подключенном клиенте
-  int size;                // Размер этой структуры
-  CString IP;              // IP-адрес клиента
-} ;
-extern vector<User> users;

@@ -11,8 +11,8 @@ public:
 	CAboutDlg(CWnd* pParent = NULL);   // standard constructor
 	virtual ~CAboutDlg();
 
-// Dialog Data
-	enum { IDD = IDD_ABOUTBOX};
+	// Dialog Data
+	enum { IDD = IDD_ABOUTBOX };
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support

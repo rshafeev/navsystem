@@ -4,43 +4,33 @@
 #include <winsock2.h>
 #include "NavServer.h"
 
-using std::vector;
-const int CServerUsersThread::SIZE=2048;
-const int MAXELEM=2000;
-struct TRunTimeUsers
-{
-   CString IMEI;        
-   vector<int> users; //список юзеров, которым надо разослать пол. данные от ID
-};
+using namespace std;
+//const int ClientThread::SIZE=2048;
+//const int MAXELEM=2000;
 
 
-vector<TRunTimeUsers> RunTimeUsers;//RTU
 
-
-CServerUsersThread::CServerUsersThread(CListBox *ListBox,User *user,int UserIndex)
+ClientThread::ClientThread(CListBox *ListBox,User *user,int UserIndex)
 {
 	this->ListBox=ListBox;
 	this->user=user;
 	m_bAutoDelete=true;
-	this->UserIndex=UserIndex;
+	this->userIndex=UserIndex;
 	Terminated=false;
-
 	IP=inet_ntoa(user->AcpStruct.sin_addr);
 	port=user->AcpStruct.sin_port;
 }
 
-CServerUsersThread::~CServerUsersThread(void)
+ClientThread::~ClientThread(void)
 {
-	int d;
-	d=33;
 }
 //==========================================================================================================
-void CServerUsersThread::Terminate()
+void ClientThread::Terminate()
 {
    Terminated=true;
 }
 //==========================================================================================================
-bool CServerUsersThread::SendGPSPoint(int *SOCKET,TGPSPoint GPSPoint)
+bool ClientThread::SendGPSPoint(int *SOCKET,TGPSPoint GPSPoint)
 {
 
  if(SOCKET!=NULL&&*SOCKET!=NULL)
@@ -56,7 +46,7 @@ bool CServerUsersThread::SendGPSPoint(int *SOCKET,TGPSPoint GPSPoint)
  return false;
 }
 //==========================================================================================================
-void CServerUsersThread::LoadDataFromDB(int *Accept,TEditorProtocol EditorProtocol)
+void ClientThread::LoadDataFromDB(int *Accept,TEditorProtocol EditorProtocol)
 {
    	  CString sqlStr;
       int nItem = 0;     
@@ -112,7 +102,7 @@ void CServerUsersThread::LoadDataFromDB(int *Accept,TEditorProtocol EditorProtoc
  /////////
 }
 //============================================================================================================================
-void CServerUsersThread::AddToMass(CString ID,int indexUser)
+void ClientThread::AddToMass(CString ID,int indexUser)
 {
    unsigned int i,j;
   
@@ -135,7 +125,7 @@ void CServerUsersThread::AddToMass(CString ID,int indexUser)
 
 }
 //============================================================================================================================
-void CServerUsersThread::DelteFromMass(CString ID,int indexUser)
+void ClientThread::DelteFromMass(CString ID,int indexUser)
 {
    unsigned int i,j;
 
@@ -155,7 +145,7 @@ void CServerUsersThread::DelteFromMass(CString ID,int indexUser)
    }
 }
 //============================================================================================================================
-void CServerUsersThread::EditorMessage(CString protocol)
+void ClientThread::EditorMessage(CString protocol)
 {
    TEditorProtocol Prl;
    CString buf;
@@ -186,13 +176,13 @@ void CServerUsersThread::EditorMessage(CString protocol)
 
 	if(Prl.type==1)  //если запрос на остановку рассылки от данного устройства
 	{
-		DelteFromMass(Prl.IMEI,UserIndex);
+		DelteFromMass(Prl.IMEI,userIndex);
 	}
 	else
 	{
 		if(Prl.RunTime==1)         // если в реальном времени
 		{
-			AddToMass(Prl.IMEI,UserIndex);
+			AddToMass(Prl.IMEI,userIndex);
 		}
 		else                           // высылаем данные с БД
 		{
@@ -203,7 +193,7 @@ void CServerUsersThread::EditorMessage(CString protocol)
    }
 }
 //============================================================================================================================
-void CServerUsersThread::MobileMessage(CString protocol)
+void ClientThread::MobileMessage(CString protocol)
 {
 	//@#<ID>#<Lo>#<De>#<Height>#;
    int i;
@@ -271,7 +261,7 @@ void CServerUsersThread::MobileMessage(CString protocol)
 }	
 }
 //============================================================================================================================
-int CServerUsersThread::Run()
+int ClientThread::Run()
 {
   char Buffer[20000]; // Буфер входящих данных
   CString f;
@@ -306,7 +296,7 @@ int CServerUsersThread::Run()
 return WM_QUIT;
 }
 //============================================================================================================================
-BOOL  CServerUsersThread::InitInstance()
+BOOL  ClientThread::InitInstance()
 {
 	SetThreadPriority(THREAD_PRIORITY_LOWEST);
 	m_bAutoDelete=true;
@@ -324,18 +314,18 @@ BOOL  CServerUsersThread::InitInstance()
    return true;   
 }
 //============================================================================================================================
-void CServerUsersThread::Delete()
+void ClientThread::Delete()
 {
 	unsigned int i,j;
 	for(i=0;i<RunTimeUsers.size();i++)
 		  {
 			  for(j=0;j<RunTimeUsers[i].users.size();j++) 
-				  if(RunTimeUsers[i].users[j]==UserIndex)
+				  if(RunTimeUsers[i].users[j]==userIndex)
 					  RunTimeUsers[i].users.erase(RunTimeUsers[i].users.begin()+j);
 		  }
 }
 //============================================================================================================================
-void CServerUsersThread::Stop()
+void ClientThread::Stop()
 {
 		  
 	      user->active = false;
@@ -347,7 +337,7 @@ void CServerUsersThread::Stop()
 		  
 }
 //======================================================================================================================
-void CServerUsersThread::writeDB(TGPSPoint &Add)
+void ClientThread::writeDB(TGPSPoint &Add)
 {
 	if(Add.DateTime==""||Add.Description==""||Add.Height==""||Add.IMEI==""||Add.Longitude=="")
       return;
@@ -383,7 +373,7 @@ void CServerUsersThread::writeDB(TGPSPoint &Add)
   CATCH_ADO()
 }
 //======================================================================================================================
-int CServerUsersThread::ExitInstance()
+int ClientThread::ExitInstance()
 {
 	  //rs.Close();//закрываем текущее соединение
 
