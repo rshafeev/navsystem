@@ -175,7 +175,8 @@ bool CADORecordset::IsEoF()
 {
     CheckOpen();
     try {
-        return !!m_pRecordset->GetEoF();
+	
+		return !m_pRecordset->GetEoF();
     }
     catch (_com_error e)
     {

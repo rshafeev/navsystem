@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "NavServer.h"
+#include "NavServerApp.h"
 #include "AboutDlg.h"
 
 

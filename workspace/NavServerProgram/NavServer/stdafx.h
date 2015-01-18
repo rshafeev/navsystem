@@ -22,33 +22,28 @@
 #include <afxwin.h>         // MFC core and standard components
 #include <afxext.h>         // MFC extensions
 
+#import "c:\Program Files (x86)\Common Files\System\ADO\msado15.dll"  no_namespace rename("EOF","EoF")
 
-#import "C:/Program Files/Common Files/System/ado/msado15.dll" no_namespace rename("EOF","EoF")
-//#import "msado15.dll" no_namespace rename("EOF","EoF")
 
 #include <string>
 #include <list>
 #include <stack>
 #include <vector>
 #include "conio.h" 
-#include <windows.h> 
+//#include <windows.h> 
 #include <process.h> 
 #include <stdlib.h> 
 #include <string.h>
 
 using namespace std;
+
+
 #ifndef _AFX_NO_OLE_SUPPORT
 #include <afxdtctl.h>           // MFC support for Internet Explorer 4 Common Controls
 #endif
 #ifndef _AFX_NO_AFXCMN_SUPPORT
 #include <afxcmn.h>                     // MFC support for Windows Common Controls
 #endif // _AFX_NO_AFXCMN_SUPPORT
-
-
-
-
-
-
 
 
 
@@ -64,19 +59,4 @@ using namespace std;
 #endif
 #endif
 
-struct TGPSPoint
-{
-  CString IMEI; 
-  CString Longitude;     //долгота
-  CString Description;   //широта
-  CString Height;        //высота
-  CString DateTime;     //время прихода сообщения на сервер
-};
 
-struct TEditorProtocol
-{
-  CString IMEI;
-  CString DTime1,DTime2;
-  int type;
-  int RunTime;
-};

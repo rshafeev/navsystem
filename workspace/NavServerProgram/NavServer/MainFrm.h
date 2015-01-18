@@ -21,7 +21,7 @@ public:
 protected: 
 	CListBox *ListBox;
 	CDBaseDlg *DBaseDlg;	
-	CServerThread *pThread;
+	
 
  
     DECLARE_DYNAMIC(CMainFrame)

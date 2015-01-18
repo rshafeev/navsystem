@@ -2,6 +2,11 @@
 #ifndef __ADO__CLASSES__H__
 #define __ADO__CLASSES__H__
 
+#include "stdafx.h"
+
+//#import "C:\\Program Files (x86)\\Common Files\\System\\ado\\msado15.dll" rename("EOF", "EndOfFile")
+
+
 //----CADOException--------------------------------------------------
 class CADOException
 {
@@ -155,8 +160,8 @@ public:
 	void Last(); //перевести курсор на последнюю запись
 	void Next(); //перевести курсор на следующую запись
 	void Prev();
-	bool IsEoF();//добрались до концы БД?
-	bool IsBoF();//добрались до начала БД?
+	bool IsEoF();//добрались до последнего кортежа?
+	bool IsBoF();//добрались до начального кортежа?
 	bool IsEmpty();
 	//получить запись:
 	_variant_t GetField(short nNumField);

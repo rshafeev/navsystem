@@ -3,7 +3,7 @@
 
 
 #include "stdafx.h"
-#include "NavServer.h"
+#include "NavServerApp.h"
 #include "DBaseDlg.h"
 
 
@@ -26,7 +26,7 @@ CDBaseDlg::~CDBaseDlg()
 void CDBaseDlg::ReloadList ()
    {
 
-	   
+	/*
    TRY_ADO()
       //CHECK_ADO_CONNECTION()
       m_listCtrl.DeleteAllItems ();
@@ -53,7 +53,7 @@ void CDBaseDlg::ReloadList ()
 			  
             }       
       CATCH_ADO()
-	  	  
+	  	  */
    }
 //*******************************************************************************************************************
 void CDBaseDlg::ReloadHards()
@@ -64,6 +64,7 @@ void CDBaseDlg::ReloadHards()
 //	ComboHards.AddString((LPCSTR)"sadsa");
 //	int a=Com8boHards.GetCount();
 //	ComboHards.ShowDropDown(1);
+	/*
    TRY_ADO()
       //CHECK_ADO_CONNECTION()
 	  
@@ -88,6 +89,7 @@ void CDBaseDlg::ReloadHards()
       CATCH_ADO()
 	
 	ComboHards.SetCurSel(0);
+	*/
    }
 //*******************************************************************************************************************
 void CDBaseDlg::OnFinalRelease()

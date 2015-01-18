@@ -1,11 +1,13 @@
 #pragma once
 class CAbstractOutputStream
 {
-public:
+protected:
 	CAbstractOutputStream();
+public:
 	virtual ~CAbstractOutputStream();
 
-	virtual void println(void);
+	void println(void);
+	virtual void println(const char *line);
 	virtual void println(CString line) = 0;
 
 };

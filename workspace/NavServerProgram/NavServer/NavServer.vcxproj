@@ -30,7 +30,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
@@ -147,17 +147,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutDlg.cpp" />
-    <ClCompile Include="AbstractClient.cpp" />
+    <ClCompile Include="AbstractClientHandler.cpp" />
+    <ClCompile Include="AccessDbConnectionFactory.cpp" />
+    <ClCompile Include="IDataBaseService.cpp" />
+    <ClCompile Include="AbstractDbConnectionFactory.cpp" />
     <ClCompile Include="AbstractOutputStream.cpp" />
+    <ClCompile Include="AccessDataBaseService.cpp" />
     <ClCompile Include="adoclasses.cpp" />
+    <ClCompile Include="ClientConnection.cpp" />
     <ClCompile Include="ClientThread.cpp" />
     <ClCompile Include="DBaseDlg.cpp" />
-    <ClCompile Include="DispatcherClient.cpp" />
-    <ClCompile Include="GPSPointRepository.cpp" />
-    <ClCompile Include="ClientTraker.cpp" />
+    <ClCompile Include="DispatcherClientHandler.cpp" />
+    <ClCompile Include="ListBoxOutputStream.cpp" />
+    <ClCompile Include="LocationsRepository.cpp" />
+    <ClCompile Include="ILocationsRepository.cpp" />
+    <ClCompile Include="TRackersMap.cpp" />
+    <ClCompile Include="TrakerClientHandler.cpp" />
     <ClCompile Include="MainFrm.cpp" />
-    <ClCompile Include="NavServer.cpp" />
-    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="NavServerApp.cpp" />
+    <ClCompile Include="ServerManager.cpp" />
     <ClCompile Include="ServerThread.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -166,19 +174,29 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AboutDlg.h" />
-    <ClInclude Include="AbstractClient.h" />
+    <ClInclude Include="AbstractClientHandler.h" />
+    <ClInclude Include="AccessDbConnectionFactory.h" />
+    <ClInclude Include="IDataBaseService.h" />
+    <ClInclude Include="AbstractDbConnectionFactory.h" />
     <ClInclude Include="AbstractOutputStream.h" />
+    <ClInclude Include="AccessDataBaseService.h" />
     <ClInclude Include="adoclasses.h" />
     <ClInclude Include="adodefs.h" />
+    <ClInclude Include="ClientConnection.h" />
     <ClInclude Include="ClientThread.h" />
     <ClInclude Include="DBaseDlg.h" />
-    <ClInclude Include="DispatcherClient.h" />
-    <ClInclude Include="GPSPointRepository.h" />
-    <ClInclude Include="ClientTraker.h" />
+    <ClInclude Include="DispatcherClientHandler.h" />
+    <ClInclude Include="ListBoxOutputStream.h" />
+    <ClInclude Include="LocationsRepository.h" />
+    <ClInclude Include="ILocationsRepository.h" />
+    <ClInclude Include="models.h" />
+    <ClInclude Include="protocols.h" />
+    <ClInclude Include="TRackersMap.h" />
+    <ClInclude Include="TrakerClientHandler.h" />
     <ClInclude Include="MainFrm.h" />
-    <ClInclude Include="NavServer.h" />
+    <ClInclude Include="NavServerApp.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Server.h" />
+    <ClInclude Include="ServerManager.h" />
     <ClInclude Include="ServerThread.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
