@@ -1,0 +1,124 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by 3DEditor.rc
+//
+#define IDOK2                           3
+#define IDCANCEL2                       4
+#define IDD_DOCVIEW                     103
+#define IDR_MAINFRAME                   128
+#define IDR_My3DEditorTYPE              129
+#define IDD_DIALOG1                     131
+#define IDD_CREATEDIALOG                131
+#define IDD_DIALOG_GPS_BASE             132
+#define IDD_DIALOG_GPSADD               133
+#define IDD_DIALOG_GPS_DEL              134
+#define IDB_BITMAP1                     136
+#define IDD_DIALOG_GPSHARD              137
+#define IDD_DIALOG_GPSHARDLIST          138
+#define IDD_ADDPOINT                    139
+#define IDD_LISTPOINTS                  140
+#define IDD_DIALOG2                     147
+#define IDD_DIALOGSAVE                  147
+#define IDB_BITMAP2                     148
+#define IDB_BITMAP_ABONENT              148
+#define IDD_GL_REGISTRY                 151
+#define IDD_GL_DIALOG_LAND1             152
+#define IDD_GL_DIALOG_LAND2             153
+#define IDD_GL_DIALOG_TEX               154
+#define IDD_GL_DIALOG_NEW               155
+#define IDC_SPLIT1                      1007
+#define IDC_SLIDER1                     1008
+#define IDC_RADIO1                      1009
+#define IDC_RADIO2                      1010
+#define IDC_EDIT1                       1011
+#define IDC_EDIT2                       1012
+#define IDC_DATETIMEPICKER1             1013
+#define IDC_EDIT5                       1013
+#define IDC_DATETIMEPICKER2             1014
+#define IDC_COMBO1                      1014
+#define IDC_EDIT8                       1014
+#define IDC_DATETIMEPICKER3             1015
+#define IDC_EDIT12                      1015
+#define IDC_DATETIMEPICKER4             1016
+#define IDC_EDIT9                       1016
+#define IDSEND                          1017
+#define IDC_EDIT10                      1017
+#define IDC_EDIT11                      1018
+#define IDC_LIST1                       1030
+#define IDC_COMMAND1                    1033
+#define IDC_BUTTON1                     1034
+#define IDC_BUTTON2                     1035
+#define IDC_BUTTON3                     1036
+#define IDC_BUTTON4                     1037
+#define IDC_BUTTON5                     1038
+#define IDC_BUTTON6                     1039
+#define IDC_BUTTON7                     1040
+#define ID_OK                           1044
+#define IDC_RADIO3                      1045
+#define IDC_EDIT3                       1046
+#define IDC_EDIT4                       1047
+#define IDC_EDIT6                       1048
+#define IDC_EDIT7                       1049
+#define IDC_CHECK1                      1059
+#define IDC_CHECK5                      1060
+#define IDC_CHECK3                      1061
+#define IDC_TREE1                       1062
+#define IDC_CHECK2                      1063
+#define IDC_CHECK4                      1064
+#define ID_Menu                         32771
+#define ID_Menu32772                    32772
+#define ID_MenuNew                      32773
+#define ID_FILE_CLOSE32774              32774
+#define ID_MenuClose                    32775
+#define ID_MODELS_LAND                  32776
+#define ID_32777                        32777
+#define ID_32778                        32778
+#define ID_32779                        32779
+#define ID_GPS_32780                    32780
+#define ID_GPS_32781                    32781
+#define ID_GPS_32782                    32782
+#define ID_GPS_CONNECT                  32783
+#define ID_GPS_32784                    32784
+#define ID_GPS_32785                    32785
+#define ID_GPS_32786                    32786
+#define ID_32787                        32787
+#define ID_32788                        32788
+#define ID_32789                        32789
+#define ID_32790                        32790
+#define ID_32791                        32791
+#define ID_32792                        32792
+#define ID_32793                        32793
+#define ID_32794                        32794
+#define ID_32795                        32795
+#define ID_32796                        32796
+#define ID_32797                        32797
+#define ID_32798                        32798
+#define ID_32799                        32799
+#define ID_32800                        32800
+#define ID_3D32801                      32801
+#define ID_32802                        32802
+#define ID_BUTTON32803                  32803
+#define ID_BUTTON32804                  32804
+#define ID_BUTTON32805                  32805
+#define ID_BUTTON32806                  32806
+#define ID_BUTTON32807                  32807
+#define ID_BUTTON32808                  32808
+#define ID_BUTTON32809                  32809
+#define ID_3D32810                      32810
+#define ID_32811                        32811
+#define ID_32812                        32812
+#define ID_32813                        32813
+#define ID_32814                        32814
+#define ID_3D32815                      32815
+#define ID_32816                        32816
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        156
+#define _APS_NEXT_COMMAND_VALUE         32817
+#define _APS_NEXT_CONTROL_VALUE         1065
+#define _APS_NEXT_SYMED_VALUE           104
+#endif
+#endif
